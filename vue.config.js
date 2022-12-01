@@ -2,7 +2,7 @@ module.exports = {
   transpileDependencies: true,
   configureWebpack: {
     resolve: {
-      alias: {
+      alias: {//配置目录的别名
         'assets': '@/assets',
         'common': '@/common',
         'components': '@/components',
@@ -11,5 +11,6 @@ module.exports = {
 
       }
     }
-  }
+  } ,
+  publicPath: process.env.NODE_ENV === 'production' ? '/demo' : './'
 }
